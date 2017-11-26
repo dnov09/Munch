@@ -1,0 +1,84 @@
+.body{
+	width: 90%;
+	margin:0 auto;
+	text-align: center;
+	background-image: url("../img/images.jpg");
+	
+	
+}
+
+.Food{
+ float:left;
+}
+#nav{
+	
+
+	margin:1%;
+}
+.feature{
+	margin:1%;
+}
+ 
+ .column1, .column2, .column3{
+ 	float:left;
+ 	width:31.1%;
+ 	margin:1%;
+ 	height:13em;
+ 	background-color:#efefef;
+ }
+ .column1{
+ 	margin:1%;
+ 	
+ 	
+ }
+ .column2{
+ 	margin:1%;
+ 	
+ }
+ .column3{
+ 	margin:1%;
+ }
+ 
+ 
+ 
+.container{
+	overflow:auto;
+	margin:1%;
+}
+ 
+ li{
+ 	display: inline;
+ 	padding:0.5em;
+ 	
+ }
+ #nav{
+ 	background-color: #efefef;
+ 	padding:0.5em 0;
+ }
+ 
+ 
+ 
+ .footer{	
+ 	background-color: #efefef;
+ 	padding:0.5em 0;
+ 	margin:1%;
+ 	
+ 	
+ }
+ .last{
+     padding:0.5em 0.5em;
+     
+ }
+ .feature{
+ 	
+ 	height: 12em;
+ 	margin-bottom: 1em;
+ 	background-color: #efefef;
+ }
+ 
+#one{float:left;}
+#two{}
+#three{float:left;}
+ 
+
+ 

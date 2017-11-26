@@ -1,0 +1,14 @@
+#voting-style {
+    background-color: maroon;
+    padding: 2px;
+    width: 175px;
+    font-family: monospace;
+    font-size: small;
+    color: white;
+    box-shadow: cyan;
+    /*: 0px 5px;*/
+}
+
+#spotify-box {
+    
+}
