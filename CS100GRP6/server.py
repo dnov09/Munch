@@ -15,6 +15,8 @@ import requests
 
 server = Flask(__name__)
 server.database = "munch.db"
+server.secret_key = os.urandom(12)
+
 
 
 def login_required(f):
@@ -29,19 +31,19 @@ def login_required(f):
     return wrap
 
 
-def connect_db():
-    return sqlite3.connect(server.database)
+# def connect_db():
+#     return sqlite3.connect(server.database)
 
 
 @server.route('/')
 # Adds the decorator to the route
 @login_required
 def home():
-    g.db = connect_db()  # Establishes a connection with db
-    cur = g.db.execute('select * from food')  # Querry the db
-    posts = [dict(cuisines=row[0]) for row in cur.fetchall()]
-    g.db.close()
-    return render_template('index.html', posts=posts)
+    # g.db = connect_db()  # Establishes a connection with db
+    # cur = g.db.execute('select * from food')  # Querry the db
+    # posts = [dict(cuisines=row[0]) for row in cur.fetchall()]
+    # g.db.close()
+    return render_template('databasetest.html', posts=posts)
 
 
 @server.route('/menue')
@@ -76,7 +78,7 @@ def logout():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+        if request.form['username'] != 'dnov' or request.form['password'] != 'cs100':
             error = 'Invalid credentials. Please try again.'
         else:
             session['logged_in'] = True
@@ -86,7 +88,6 @@ def login():
 
 
 if __name__ == '__main__':
-    server.secret_key = os.urandom(12)
     server.run(debug=True)
 
 server.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8081)))

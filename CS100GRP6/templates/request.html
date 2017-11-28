@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+       <script type="text/javascript" src="..static/js/form.js"></script>
+       <link rel="stylesheet" href="..static/css/form.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <title>MUNCH</title>
 
 </head>
@@ -27,30 +34,23 @@
             </div>
         </div>
 
-        <form>
-            First Name<input type="Text" name="FirstName" placeholder="First Name">
-            <br> Last Name<input type="Text" name="FirstName" placeholder="Last Name">
-            <br> A-Number
-            <input type="Text" name="FirstName" placeholder="A-Number">
-            <br>
-            <br>
-            <input type="radio" name="meal" value="Break Fast" checked> Break Fast<br>
-            <input type="radio" name="meal" value="Lunch"> Lunch<br>
-            <input type="radio" name="meal" value="Dinner"> Dinner<br>
-            <br>
-            <select>
-          <option value="one">Food 1</option>
-          <option value="two">Food 2</option>
-          <option value="three">Food 3</option>
-          <option value="four">Food 4</option>
-          <option value="five">Food 5</option>
-         </select>
-            <br><br>
 
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <form class="js-form">
+                <div id="js-login-data">
 
-            <input type="submit" value="Submit">
-        </form>
-
+                </div>
+                <div class="form-group">
+                  <label for="js-message">How was the food?</label>
+                  <input type="message" id="js-message" class="form-control" />
+                </div>
+                <button id="js-submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
 
 
 
@@ -69,10 +69,6 @@
 
     </div>
 
-
-
-
-
-    <body>
+  </body>
 
 </html>
